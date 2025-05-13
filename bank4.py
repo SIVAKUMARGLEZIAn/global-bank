@@ -30,7 +30,6 @@ banking_functions()
 print("Logging in, please wait...")
 for _ in tqdm(range(5), desc="Processing"):
     time.sleep(0.3)  
-
 print("Login successfully.")
 
 # Deposit and withdrawal
@@ -53,8 +52,16 @@ def banking_calculations(deposit, withdraw, available):
         print('Balance is zero.')
     else:
         print('Insufficient funds.')
-
-
 banking_calculations(deposit, withdraw, available)
+# bonus details
+def banking_bonus_details():
+    print("availabe balance:",available)
+    if available>40000:
+        print("golden_member:can get 30%_bonus")
+    elif available>30000:
+        print("silver_member:can get 10%_bonus")
+    else:
+        print("brownze_member:can get 4%_bonus")
+banking_bonus_details()
 # if any unwanted codes here, next time i will correct for coming other projects
 # thankyou unicomtic
